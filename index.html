@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megabit Processamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pizzaria Delícia</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+		<h2>Megabit Processamento</h2>
+		<p>Empresa de software especializada em sistemas para exportação e importação.</p>
+		<img src="wallpaper_megabit.jpg" alt="Megabit Processamento" class="banner-image">
+	</section>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>A empresa Megabit Processamento de Dados LTDA, fundada em 2002, é uma empresa especializada no desenvolvimento de sistemas voltados para a emissão de notas fiscais para exportação, importação e Declaração Única de Exportação (DUE).</p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <label for="nome">Megabit Processamento</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">megabitprocessamento@hotmail.com</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Megabit Processamento. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+	
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "8b5299ff-6a40-4973-9dc2-713add4fc84d",
+            apiHost: "https://geovannaw-flowise-ai.hf.space",
+            chatflowConfig: {
+                // topK: 2
+            },
+            theme: {
+                button: {
+                    backgroundColor: "red",
+                    right: 20,
+                    bottom: 20,
+                    size: "medium", // small | medium | large | number
+                    dragAndDrop: true,
+                    iconColor: "white",
+                    customIconSrc: "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
+                    autoWindowOpen: {
+                        autoOpen: true, //parameter to control automatic window opening
+                        openDelay: 2, // Optional parameter for delay time in seconds
+                        autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
+                        },
+                },
+                tooltip: {
+                    showTooltip: true,
+                    tooltipMessage: 'Olá 👋!',
+                    tooltipBackgroundColor: 'black',
+                    tooltipTextColor: 'white',
+                    tooltipFontSize: 16,
+                },
+                chatWindow: {
+                    showTitle: true,
+                    title: 'Chatbot',
+                    titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                    showAgentMessages: true,
+                    welcomeMessage: 'Olá! Seja bem vindo, em que posso ser útil?',
+                    errorMessage: 'Erro',
+                    backgroundColor: "#ffffff",
+                    backgroundImage: 'enter image path or link', // If set, this will overlap the background color of the chat window.
+                    height: 400,
+                    width: 400,
+                    fontSize: 16,
+                    //starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+                    starterPromptFontSize: 15,
+                    clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads.
+                    botMessage: {
+                        backgroundColor: "#f7f8ff",
+                        textColor: "#303235",
+                        showAvatar: true,
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+                    },
+                    userMessage: {
+                        backgroundColor: "#3B81F6",
+                        textColor: "#ffffff",
+                        showAvatar: true,
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                    },
+                    textInput: {
+                        placeholder: 'Digite sua pergunta',
+                        backgroundColor: '#ffffff',
+                        textColor: '#303235',
+                        sendButtonColor: '#3B81F6',
+                        maxChars: 50,
+                        maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                        autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+                        sendMessageSound: true,
+                        // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+                        receiveMessageSound: true,
+                        // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true. 
+                    },
+                    feedback: {
+                        color: '#303235',
+                    },
+                    footer: {
+                        textColor: '#303235',
+                        text: 'Powered by',
+                        company: 'Flowise',
+                        companyLink: 'https://flowiseai.com',
+                    }
+                }
+            }
+        })
+    </script>
+
+
+	
+</body>
+</html>
+
